@@ -9,7 +9,7 @@ Clicker::Clicker() {}					//Default Constructor
 
 Clicker::~Clicker() {}					//Destructor
 
-Clicker::Clicker(int delay) {			//Overloaded Constructor
+Clicker::Clicker(int delay) {				//Overloaded Constructor
 	Clicker::cDelay = delay;
 	Clicker::isRunning = false;
 }
