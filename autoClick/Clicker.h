@@ -11,6 +11,4 @@ public:
 	void startClick();
 	void stopClick();
 	void setDelay();
-
-
 };
