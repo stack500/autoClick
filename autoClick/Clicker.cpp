@@ -22,7 +22,7 @@ void Clicker::startClick() {
 	isRunning = true;
 
 	//Error Handling -  If GetCursorPos() returns true (function completes successfully - refer to msdn)
-	if (GetCursorPos(&p)) {				//GetCursorPos stores coordinates in our pointer variable 
+	if (GetCursorPos(&p)) {				//GetCursorPos stores coordinates in our point type variable 
 		//Simulate Click
 		while (isRunning) {
 		mouse_event(MOUSEEVENTF_LEFTDOWN, p.x, p.y, 0, 0);
