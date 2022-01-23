@@ -1,5 +1,5 @@
 #include <Windows.h>	//Win32API
-#include <iostream>		//Input/Output
+#include <iostream>	//Input/Output
 #include "Clicker.h"	//Header File
 
 
