@@ -2,6 +2,9 @@
 #include <iostream>		//Input/Output
 #include "Clicker.h"	//Header File
 
+
+//Constructors / Destructors
+
 Clicker::Clicker() {}					//Default Constructor
 
 Clicker::~Clicker() {}					//Destructor
@@ -12,12 +15,7 @@ Clicker::Clicker(int delay) {			//Overloaded Constructor
 }
 
 
-
-
 //Function Definitions / Implementation
-
-
-
 
 void Clicker::startClick() {
 	POINT p;
@@ -25,36 +23,27 @@ void Clicker::startClick() {
 
 	//Error Handling -  If GetCursorPos() returns true (function completes successfully - refer to msdn)
 	if (GetCursorPos(&p)) {				//GetCursorPos stores coordinates in our pointer variable 
-
-
 		//Simulate Click
 		while (isRunning) {
 		mouse_event(MOUSEEVENTF_LEFTDOWN, p.x, p.y, 0, 0);
 		mouse_event(MOUSEEVENTF_LEFTUP, p.x, p.y, 0, 0);
 		Sleep(cDelay);
-
-		
-
+			
 		if (GetAsyncKeyState(VK_F4) & 0x01) {
 			stopClick();
 		}
-
 		}
 	}
 
 	else {
 		std::cout << "Start Click Function Failed - Could Not Get Cursor Position" << std::endl;
 	}
-
-
 }
-
 
 
 void Clicker::stopClick() {
 	isRunning = false;
 }
-
 
 
 void Clicker::setDelay() {
