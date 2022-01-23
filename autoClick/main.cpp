@@ -14,13 +14,11 @@ int main()
 
     Clicker clicker(50);                                    //create clicker object, parse 50ms argument to our constructor to initialize our cDelay property.
 
+    
     while (!GetAsyncKeyState(VK_F8) & 0x01) {               //Main Loop
-
-                                             
-
+                                    
         if (GetAsyncKeyState(VK_F3) & 0x01) {               //Start
             clicker.startClick();
-
         }
 
         else if (GetAsyncKeyState(VK_F4) & 0x01) {          //Stop
@@ -34,8 +32,5 @@ int main()
         else {
         //do nothing
         }
-
-
     }
-
 }
