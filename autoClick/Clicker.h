@@ -3,7 +3,6 @@ private:
 	int cDelay;
 	bool isRunning;
 public:
-
 	Clicker(); //Default Constructor
 	Clicker(int delay); //Constructor
 	~Clicker(); //Destructor
